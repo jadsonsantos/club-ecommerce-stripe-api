@@ -6,7 +6,11 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://clubecommerce.jadsonsantos.dev.br',
+  })
+);
 app.use(express.json());
 
 const PAYMENT_CONFIRMATION_URL = `${process.env.FRONT_END_URL}/payment-confirmation`;
