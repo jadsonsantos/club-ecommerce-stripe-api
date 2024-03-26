@@ -8,7 +8,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: 'https://clubecommerce.jadsonsantos.dev.br',
+    origin: [
+      'https://clubecommerce.jadsonsantos.dev.br',
+      'http://localhost:3000',
+    ],
   })
 );
 app.use(express.json());
